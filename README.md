@@ -29,53 +29,89 @@ Además, este repositorio sirve como una plataforma para mostrar creaciones inno
 
 A continuación se presenta una visión general completa de nuestras implementaciones de agentes GenAI, organizadas por categoría y funcionalidad. Cada implementación está diseñada para mostrar diferentes aspectos del desarrollo de agentes de IA, desde agentes conversacionales básicos hasta sistemas multi-agente complejos.
 
-| #  | Categoría         | Nombre del Agente             | Framework         | Características Principales                                                   |
-|----|-------------------|-------------------------------|-------------------|------------------------------------------------------------------------------|
-| 1  | 🌱 **Principiante** | Agente Conversacional Simple   | LangChain/PydanticAI | Conversaciones conscientes del contexto, gestión de historial               |
-| 2  | 🌱 **Principiante** | Agente de Preguntas y Respuestas | LangChain         | Comprensión de consultas, respuestas concisas                               |
-| 3  | 🌱 **Principiante** | Agente de Análisis de Datos Simple | LangChain/PydanticAI | Interpretación de conjuntos de datos, consultas en lenguaje natural        |
-| 4  | 🔧 **Framework**  | Introducción a LangGraph        | LangGraph         | Flujos de trabajo modulares de IA, gestión de estado                        |
-| 5  | 🔧 **Framework**  | Protocolo de Contexto de Modelo | MCP              | Integración de IA con recursos externos                                      |
-| 6  | 🎓 **Educativo**  | ATLAS: Sistema de Tareas Académicas | LangGraph         | Planificación académica multi-agente, toma de notas                         |
-| 7  | 🎓 **Educativo**  | Agente de Artículos Científicos | LangGraph         | Automatización de revisión de literatura                                    |
-| 8  | 🎓 **Educativo**  | Chiron - Aprendizaje Feynman    | LangGraph         | Aprendizaje adaptativo, sistema de puntos de control                        |
-| 9  | 💼 **Negocios**   | Agente de Soporte al Cliente    | LangGraph         | Categorización de consultas, análisis de sentimientos                       |
-| 10 | 💼 **Negocios**   | Agente de Calificación de Ensayos | LangGraph         | Calificación automatizada, múltiples criterios                              |
-| 11 | 💼 **Negocios**   | Agente de Planificación de Viajes | LangGraph         | Itinerarios personalizados                                                  |
-| 12 | 💼 **Negocios**   | Asistente de Carrera GenAI      | LangGraph         | Orientación profesional, rutas de aprendizaje                               |
-| 13 | 💼 **Negocios**   | Asistente de Gestor de Proyectos | LangGraph         | Generación de tareas, evaluación de riesgos                                 |
-| 14 | 💼 **Negocios**   | Asistente de Análisis de Contratos | LangGraph         | Análisis de cláusulas, verificación de cumplimiento                         |
-| 15 | 💼 **Negocios**   | Agente de Pruebas E2E           | LangGraph         | Automatización de pruebas, control de navegador                             |
-| 16 | 🎨 **Creativo**   | Generador de Animaciones GIF    | LangGraph         | Pipeline de texto a animación                                               |
-| 17 | 🎨 **Creativo**   | Generador de Poemas TTS         | LangGraph         | Clasificación de texto, síntesis de voz                                     |
-| 18 | 🎨 **Creativo**   | Compositor Musical              | LangGraph         | Composición musical con IA                                                  |
-| 19 | 🎨 **Creativo**   | Inteligencia de Contenido       | LangGraph         | Generación de contenido multiplataforma                                     |
-| 20 | 🎨 **Creativo**   | Generador de Memes de Negocios  | LangGraph         | Creación de memes alineados con marca                                       |
-| 21 | 🎨 **Creativo**   | Juego de Misterio de Asesinato  | LangGraph         | Generación procedimental de historias                                       |
-| 22 | 📊 **Análisis**   | Agente Conversacional con Memoria | LangChain         | Integración de memoria a corto/largo plazo                                  |
-| 23 | 📊 **Análisis**   | Colaboración Multi-Agente       | LangChain         | Investigación histórica, análisis de datos                                  |
-| 24 | 📊 **Análisis**   | Agente Auto-mejorado            | LangChain         | Aprendizaje de interacciones                                                 |
-| 25 | 📊 **Análisis**   | Agente Orientado a Tareas       | LangChain         | Resumen de texto, traducción                                                |
-| 26 | 📊 **Análisis**   | Agente de Búsqueda en Internet  | LangChain         | Investigación web, resumen                                                   |
-| 27 | 📊 **Análisis**   | Equipo de Investigación - Autogen | AutoGen           | Colaboración de investigación multi-agente                                  |
-| 28 | 📊 **Análisis**   | Analizador de Llamadas de Ventas | LangGraph         | Transcripción de audio, análisis NLP                                        |
-| 29 | 📊 **Análisis**   | Sistema de Emergencia Climática  | LangGraph         | Procesamiento de datos en tiempo real                                       |
-| 30 | 📊 **Análisis**   | Código Auto-reparador           | LangGraph         | Detección de errores, correcciones automatizadas                            |
-| 31 | 📊 **Análisis**   | DataScribe                      | LangGraph         | Exploración de bases de datos, planificación de consultas                   |
-| 32 | 📊 **Análisis**   | Email con Memoria Mejorada       | LangGraph         | Triaje de emails, generación de respuestas                                  |
-| 33 | 📰 **Noticias**   | Resumen de Noticias TL;DR       | LangGraph         | Resumen de noticias, integración de API                                     |
-| 34 | 📰 **Noticias**   | AInsight                        | LangGraph         | Agregación de noticias AI/ML                                                |
-| 35 | 📰 **Noticias**   | Asistente de Periodismo         | LangGraph         | Verificación de hechos, detección de sesgos                                 |
-| 36 | 📰 **Noticias**   | Escritor de Blog                | OpenAI Swarm      | Creación colaborativa de contenido                                           |
-| 37 | 📰 **Noticias**   | Generador de Podcast            | LangGraph         | Búsqueda de contenido, generación de audio                                  |
-| 38 | 🛍️ **Compras**   | ShopGenie                       | LangGraph         | Comparación de productos, recomendaciones                                   |
-| 39 | 🛍️ **Compras**   | Agente Comprador de Autos       | LangGraph         | Web scraping, soporte de decisiones                                         |
-| 40 | 🎯 **Gestión de Tareas** | Taskifier                | LangGraph         | Análisis de estilo de trabajo, desglose de tareas                           |
-| 41 | 🎯 **Gestión de Tareas** | Gestión de Comestibles   | CrewAI            | Seguimiento de inventario, sugerencias de recetas                           |
-| 42 | 🔍 **QA**         | Inspector de LangGraph          | LangGraph         | Pruebas de sistema, detección de vulnerabilidades                           |
-| 43 | 🔍 **QA**         | Bot de Green Deal de la UE      | LangGraph         | Cumplimiento regulatorio, sistema de FAQ                                    |
-| 44 | 🔍 **QA**         | Revisión Sistemática            | LangGraph         | Procesamiento de artículos académicos, generación de borradores             |
-| 45 | 🌟 **Avanzado**   | Agente RAG Controlable          | Custom            | Respuesta a preguntas complejas, grafo determinista                         |
+| #  | Categoría         | Nombre del Agente             | Framework         | Características Principales                                                   | Archivo |
+|----|-------------------|-------------------------------|-------------------|-------------------------------------------------------------------------------|---------|
+| 1  | 🌱 **Principiante** | Agente Conversacional Simple   | LangChain/PydanticAI | Conversaciones conscientes del contexto, gestión de historial               | [`simple_conversational_agent.ipynb`](./all_agents_tutorials/simple_conversational_agent.ipynb) / [`simple_conversational_agent-pydanticai.ipynb`](./all_agents_tutorials/simple_conversational_agent-pydanticai.ipynb) |
+| 2  | 🌱 **Principiante** | Agente de Preguntas y Respuestas | LangChain         | Comprensión de consultas, respuestas concisas                               | [`simple_question_answering_agent.ipynb`](./all_agents_tutorials/simple_question_answering_agent.ipynb) |
+| 3  | 🌱 **Principiante** | Agente de Análisis de Datos Simple | LangChain/PydanticAI | Interpretación de conjuntos de datos, consultas en lenguaje natural        | [`simple_data_analysis_agent_notebook.ipynb`](./all_agents_tutorials/simple_data_analysis_agent_notebook.ipynb) / [`simple_data_analysis_agent_notebook-pydanticai.ipynb`](./all_agents_tutorials/simple_data_analysis_agent_notebook-pydanticai.ipynb) |
+| 4  | 🔧 **Framework**  | Introducción a LangGraph        | LangGraph         | Flujos de trabajo modulares de IA, gestión de estado                        | [`langgraph-tutorial.ipynb`](./all_agents_tutorials/langgraph-tutorial.ipynb) |
+| 5  | 🔧 **Framework**  | Protocolo de Contexto de Modelo | MCP              | Integración de IA con recursos externos                                      | [`mcp-tutorial.ipynb`](./all_agents_tutorials/mcp-tutorial.ipynb) |
+| 6  | 🎓 **Educativo**  | ATLAS: Sistema de Tareas Académicas | LangGraph         | Planificación académica multi-agente, toma de notas                         | [`Academic_Task_Learning_Agent_LangGraph.ipynb`](./all_agents_tutorials/Academic_Task_Learning_Agent_LangGraph.ipynb) |
+| 7  | 🎓 **Educativo**  | Agente de Artículos Científicos | LangGraph         | Automatización de revisión de literatura                                    | [`scientific_paper_agent_langgraph.ipynb`](./all_agents_tutorials/scientific_paper_agent_langgraph.ipynb) |
+| 8  | 🎓 **Educativo**  | Chiron - Aprendizaje Feynman    | LangGraph         | Aprendizaje adaptativo, sistema de puntos de control                        | [`chiron_learning_agent_langgraph.ipynb`](./all_agents_tutorials/chiron_learning_agent_langgraph.ipynb) |
+| 9  | 💼 **Negocios**   | Agente de Soporte al Cliente    | LangGraph         | Categorización de consultas, análisis de sentimientos                       | [`customer_support_agent_langgraph.ipynb`](./all_agents_tutorials/customer_support_agent_langgraph.ipynb) |
+| 10 | 💼 **Negocios**   | Agente de Calificación de Ensayos | LangGraph         | Calificación automatizada, múltiples criterios                              | [`essay_grading_system_langgraph.ipynb`](./all_agents_tutorials/essay_grading_system_langgraph.ipynb) |
+| 11 | 💼 **Negocios**   | Agente de Planificación de Viajes | LangGraph         | Itinerarios personalizados                                                  | [`simple_travel_planner_langgraph.ipynb`](./all_agents_tutorials/simple_travel_planner_langgraph.ipynb) |
+| 12 | 💼 **Negocios**   | Asistente de Carrera GenAI      | LangGraph         | Orientación profesional, rutas de aprendizaje                               | [`agent_hackathon_genAI_career_assistant.ipynb`](./all_agents_tutorials/agent_hackathon_genAI_career_assistant.ipynb) |
+| 13 | 💼 **Negocios**   | Asistente de Gestor de Proyectos | LangGraph         | Generación de tareas, evaluación de riesgos                                 | [`project_manager_assistant_agent.ipynb`](./all_agents_tutorials/project_manager_assistant_agent.ipynb) |
+| 14 | 💼 **Negocios**   | Asistente de Análisis de Contratos | LangGraph         | Análisis de cláusulas, verificación de cumplimiento                         | [`ClauseAI.ipynb`](./all_agents_tutorials/ClauseAI.ipynb) |
+| 15 | 💼 **Negocios**   | Agente de Pruebas E2E           | LangGraph         | Automatización de pruebas, control de navegador                             | [`e2e_testing_agent.ipynb`](./all_agents_tutorials/e2e_testing_agent.ipynb) |
+| 16 | 🎨 **Creativo**   | Generador de Animaciones GIF    | LangGraph         | Pipeline de texto a animación                                               | [`gif_animation_generator_langgraph.ipynb`](./all_agents_tutorials/gif_animation_generator_langgraph.ipynb) |
+| 17 | 🎨 **Creativo**   | Generador de Poemas TTS         | LangGraph         | Clasificación de texto, síntesis de voz                                     | [`tts_poem_generator_agent_langgraph.ipynb`](./all_agents_tutorials/tts_poem_generator_agent_langgraph.ipynb) |
+| 18 | 🎨 **Creativo**   | Compositor Musical              | LangGraph         | Composición musical con IA                                                  | [`music_compositor_agent_langgraph.ipynb`](./all_agents_tutorials/music_compositor_agent_langgraph.ipynb) |
+| 19 | 🎨 **Creativo**   | Inteligencia de Contenido       | LangGraph         | Generación de contenido multiplataforma                                     | [`ContentIntelligence.ipynb`](./all_agents_tutorials/ContentIntelligence.ipynb) |
+| 20 | 🎨 **Creativo**   | Generador de Memes de Negocios  | LangGraph         | Creación de memes alineados con marca                                       | [`business_meme_generator.ipynb`](./all_agents_tutorials/business_meme_generator.ipynb) |
+| 21 | 🎨 **Creativo**   | Juego de Misterio de Asesinato  | LangGraph         | Generación procedimental de historias                                       | [`murder_mystery_agent_langgraph.ipynb`](./all_agents_tutorials/murder_mystery_agent_langgraph.ipynb) |
+| 22 | 📊 **Análisis**   | Agente Conversacional con Memoria | LangChain         | Integración de memoria a corto/largo plazo                                  | [`memory_enhanced_conversational_agent.ipynb`](./all_agents_tutorials/memory_enhanced_conversational_agent.ipynb) / [`memory-agent-tutorial.ipynb`](./all_agents_tutorials/memory-agent-tutorial.ipynb) |
+| 23 | 📊 **Análisis**   | Colaboración Multi-Agente       | LangChain         | Investigación histórica, análisis de datos                                  | [`multi_agent_collaboration_system.ipynb`](./all_agents_tutorials/multi_agent_collaboration_system.ipynb) |
+| 24 | 📊 **Análisis**   | Agente Auto-mejorado            | LangChain         | Aprendizaje de interacciones                                                 | [`self_improving_agent.ipynb`](./all_agents_tutorials/self_improving_agent.ipynb) |
+| 25 | 📊 **Análisis**   | Agente Orientado a Tareas       | LangChain         | Resumen de texto, traducción                                                | [`task_oriented_agent.ipynb`](./all_agents_tutorials/task_oriented_agent.ipynb) |
+| 26 | 📊 **Análisis**   | Agente de Búsqueda en Internet  | LangChain         | Investigación web, resumen                                                   | [`search_the_internet_and_summarize.ipynb`](./all_agents_tutorials/search_the_internet_and_summarize.ipynb) |
+| 27 | 📊 **Análisis**   | Equipo de Investigación - Autogen | AutoGen           | Colaboración de investigación multi-agente                                  | [`research_team_autogen.ipynb`](./all_agents_tutorials/research_team_autogen.ipynb) |
+| 28 | 📊 **Análisis**   | Analizador de Llamadas de Ventas | LangGraph         | Transcripción de audio, análisis NLP                                        | [`sales_call_analyzer_agent.ipynb`](./all_agents_tutorials/sales_call_analyzer_agent.ipynb) |
+| 29 | 📊 **Análisis**   | Sistema de Emergencia Climática  | LangGraph         | Procesamiento de datos en tiempo real                                       | [`Weather_Disaster_Management_AI_AGENT.ipynb`](./all_agents_tutorials/Weather_Disaster_Management_AI_AGENT.ipynb) |
+| 30 | 📊 **Análisis**   | Código Auto-reparador           | LangGraph         | Detección de errores, correcciones automatizadas                            | [`self_healing_code.ipynb`](./all_agents_tutorials/self_healing_code.ipynb) |
+| 31 | 📊 **Análisis**   | DataScribe                      | LangGraph         | Exploración de bases de datos, planificación de consultas                   | [`database_discovery_fleet.ipynb`](./all_agents_tutorials/database_discovery_fleet.ipynb) |
+| 32 | 📊 **Análisis**   | Email con Memoria Mejorada       | LangGraph         | Triaje de emails, generación de respuestas                                  | [`memory_enhanced_conversational_agent.ipynb`](./all_agents_tutorials/memory_enhanced_conversational_agent.ipynb) |
+| 33 | 📰 **Noticias**   | Resumen de Noticias TL;DR       | LangGraph         | Resumen de noticias, integración de API                                     | [`news_tldr_langgraph.ipynb`](./all_agents_tutorials/news_tldr_langgraph.ipynb) |
+| 34 | 📰 **Noticias**   | AInsight                        | LangGraph         | Agregación de noticias AI/ML                                                | [`ainsight_langgraph.ipynb`](./all_agents_tutorials/ainsight_langgraph.ipynb) |
+| 35 | 📰 **Noticias**   | Asistente de Periodismo         | LangGraph         | Verificación de hechos, detección de sesgos                                 | [`journalism_focused_ai_assistant_langgraph.ipynb`](./all_agents_tutorials/journalism_focused_ai_assistant_langgraph.ipynb) |
+| 36 | 📰 **Noticias**   | Escritor de Blog                | OpenAI Swarm      | Creación colaborativa de contenido                                           | [`blog_writer_swarm.ipynb`](./all_agents_tutorials/blog_writer_swarm.ipynb) |
+| 37 | 📰 **Noticias**   | Generador de Podcast            | LangGraph         | Búsqueda de contenido, generación de audio                                  | [`generate_podcast_agent_langgraph.ipynb`](./all_agents_tutorials/generate_podcast_agent_langgraph.ipynb) |
+| 38 | 🛍️ **Compras**   | ShopGenie                       | LangGraph         | Comparación de productos, recomendaciones                                   | [`ShopGenie.ipynb`](./all_agents_tutorials/ShopGenie.ipynb) |
+| 39 | 🛍️ **Compras**   | Agente Comprador de Autos       | LangGraph         | Web scraping, soporte de decisiones                                         | [`car_buyer_agent_langgraph.ipynb`](./all_agents_tutorials/car_buyer_agent_langgraph.ipynb) |
+| 40 | 🎯 **Gestión de Tareas** | Taskifier                | LangGraph         | Análisis de estilo de trabajo, desglose de tareas                           | [`taskifier.ipynb`](./all_agents_tutorials/taskifier.ipynb) |
+| 41 | 🎯 **Gestión de Tareas** | Gestión de Comestibles   | CrewAI            | Seguimiento de inventario, sugerencias de recetas                           | [`grocery_management_agents_system.ipynb`](./all_agents_tutorials/grocery_management_agents_system.ipynb) |
+| 42 | 🔍 **QA**         | Inspector de LangGraph          | LangGraph         | Pruebas de sistema, detección de vulnerabilidades                           | [`graph_inspector_system_langgraph.ipynb`](./all_agents_tutorials/graph_inspector_system_langgraph.ipynb) |
+| 43 | 🔍 **QA**         | Bot de Green Deal de la UE      | LangGraph         | Cumplimiento regulatorio, sistema de FAQ                                    | [`EU_Green_Compliance_FAQ_Bot.ipynb`](./all_agents_tutorials/EU_Green_Compliance_FAQ_Bot.ipynb) |
+| 44 | 🔍 **QA**         | Revisión Sistemática            | LangGraph         | Procesamiento de artículos académicos, generación de borradores             | [`systematic_review_of_scientific_articles.ipynb`](./all_agents_tutorials/systematic_review_of_scientific_articles.ipynb) |
+| 45 | 🌟 **Avanzado**   | Agente RAG Controlable          | Custom            | Respuesta a preguntas complejas, grafo determinista                         | *En desarrollo* |
+
+## 🗂️ Navegación Rápida por Archivos
+
+### 📁 Estructura del Repositorio
+
+```bash
+GenAI_Agents/
+├── 📄 README.md                    # Este archivo - Guía completa del repositorio
+├── 📄 CONTRIBUTING.md              # Guía de contribución
+├── 📄 LICENSE                      # Licencia del proyecto
+├── 📄 requirements.txt             # Dependencias de Python
+├── 📁 all_agents_tutorials/        # Todos los notebooks de agentes
+├── 📁 data/                        # Datasets y archivos de datos
+├── 📁 images/                      # Imágenes y diagramas
+└── 📁 audio/                       # Archivos de audio generados
+```
+
+### 🚀 Guías de Inicio Rápido
+
+**Para Principiantes** - Comienza aquí:
+
+- [`simple_conversational_agent.ipynb`](./all_agents_tutorials/simple_conversational_agent.ipynb) - Tu primer agente conversacional
+- [`simple_question_answering_agent.ipynb`](./all_agents_tutorials/simple_question_answering_agent.ipynb) - Agente básico de Q&A
+- [`langgraph-tutorial.ipynb`](./all_agents_tutorials/langgraph-tutorial.ipynb) - Introducción a LangGraph
+
+**Agentes Populares** - Los más utilizados:
+
+- [`Academic_Task_Learning_Agent_LangGraph.ipynb`](./all_agents_tutorials/Academic_Task_Learning_Agent_LangGraph.ipynb) - ATLAS (Sistema académico)
+- [`ContentIntelligence.ipynb`](./all_agents_tutorials/ContentIntelligence.ipynb) - Generación de contenido multiplataforma
+- [`customer_support_agent_langgraph.ipynb`](./all_agents_tutorials/customer_support_agent_langgraph.ipynb) - Soporte al cliente automático
+
+**Casos de Uso Avanzados**:
+
+- [`multi_agent_collaboration_system.ipynb`](./all_agents_tutorials/multi_agent_collaboration_system.ipynb) - Colaboración multi-agente
+- [`self_healing_code.ipynb`](./all_agents_tutorials/self_healing_code.ipynb) - Código que se auto-repara
+- [`murder_mystery_agent_langgraph.ipynb`](./all_agents_tutorials/murder_mystery_agent_langgraph.ipynb) - Juego interactivo
 
 Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas por categorías:
 
@@ -84,6 +120,7 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 1. **Agente Conversacional Simple**
 
    - **Implementaciones disponibles en LangChain y PydanticAI**
+   - **📁 Archivos:** [`simple_conversational_agent.ipynb`](./all_agents_tutorials/simple_conversational_agent.ipynb) | [`simple_conversational_agent-pydanticai.ipynb`](./all_agents_tutorials/simple_conversational_agent-pydanticai.ipynb)
    
     #### Descripción General 🔎
     Un AI conversacional consciente del contexto mantiene información a través de las interacciones, permitiendo diálogos más naturales.
@@ -93,6 +130,8 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 
 2. **Agente Simple de Preguntas y Respuestas**
    
+   - **📁 Archivo:** [`simple_question_answering_agent.ipynb`](./all_agents_tutorials/simple_question_answering_agent.ipynb)
+
    #### Descripción General 🔎
    Un agente de preguntas y respuestas (QA) que utiliza LangChain y modelos de lenguaje OpenAI comprende consultas de usuario y proporciona respuestas relevantes y concisas.
    
@@ -102,6 +141,7 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 3. **Agente Simple de Análisis de Datos**
 
    - **Implementaciones disponibles en LangChain y PydanticAI**
+   - **📁 Archivos:** [`simple_data_analysis_agent_notebook.ipynb`](./all_agents_tutorials/simple_data_analysis_agent_notebook.ipynb) | [`simple_data_analysis_agent_notebook-pydanticai.ipynb`](./all_agents_tutorials/simple_data_analysis_agent_notebook-pydanticai.ipynb)
 
    #### Descripción General 🔎
    Un agente de análisis de datos impulsado por IA interpreta y responde preguntas sobre conjuntos de datos usando lenguaje natural, combinando modelos de lenguaje con herramientas de manipulación de datos para exploración intuitiva de datos.
@@ -113,6 +153,8 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 
 4. **Introducción a LangGraph: Construyendo Flujos de Trabajo Modulares de IA**
    
+   - **📁 Archivo:** [`langgraph-tutorial.ipynb`](./all_agents_tutorials/langgraph-tutorial.ipynb)
+
    #### Descripción General 🔎
    Este tutorial introduce LangGraph, un framework poderoso para crear flujos de trabajo modulares de IA basados en grafos. Aprende cómo aprovechar LangGraph para construir agentes de IA más complejos y flexibles que pueden manejar procesos de múltiples pasos de manera eficiente.
 
@@ -121,6 +163,9 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 
 5. **Protocolo de Contexto de Modelo (MCP): Integración Perfecta de IA y Recursos Externos**
    
+   - **📁 Archivo:** [`mcp-tutorial.ipynb`](./all_agents_tutorials/mcp-tutorial.ipynb)
+   - **📁 Scripts:** [`scripts/mcp_server.py`](./all_agents_tutorials/scripts/mcp_server.py)
+
    #### Descripción General 🔎
    Este tutorial introduce el Protocolo de Contexto de Modelo (MCP), un estándar abierto para conectar modelos de IA con fuentes de datos externas y herramientas. Aprende cómo MCP sirve como un puente universal entre agentes GenAI y el ecosistema digital más amplio, habilitando aplicaciones de IA más capaces y conscientes del contexto.
 
@@ -131,6 +176,9 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 
 6. **ATLAS: Sistema de Tareas Académicas y Aprendizaje**
    
+   - **📁 Archivo:** [`Academic_Task_Learning_Agent_LangGraph.ipynb`](./all_agents_tutorials/Academic_Task_Learning_Agent_LangGraph.ipynb)
+   - **📁 Datos:** [`data/ATLAS_data/`](./data/ATLAS_data/) - Perfiles, calendarios y tareas de ejemplo
+
    #### Descripción General 🔎
    ATLAS demuestra cómo construir un sistema multi-agente inteligente que transforma el soporte académico a través de asistencia impulsada por IA. El sistema aprovecha el framework de flujo de trabajo de LangGraph para coordinar múltiples agentes especializados que proporcionan planificación académica personalizada, toma de notas y soporte de asesoramiento.
 
@@ -139,6 +187,8 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 
 7. **Agente de Artículos Científicos - Revisión de Literatura**
    
+   - **📁 Archivo:** [`scientific_paper_agent_langgraph.ipynb`](./all_agents_tutorials/scientific_paper_agent_langgraph.ipynb)
+
    #### Descripción General 🔎
    Un asistente de investigación inteligente que ayuda a los usuarios a navegar, entender y analizar literatura científica a través de un flujo de trabajo orquestado. El sistema combina APIs académicas con técnicas sofisticadas de procesamiento de papers para automatizar tareas de revisión de literatura, permitiendo a los investigadores extraer insights de manera eficiente de papers académicos mientras mantienen rigor y control de calidad en la investigación.
 
@@ -147,6 +197,8 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 
 8. **Chiron - Un Agente de Aprendizaje Mejorado por Feynman**
    
+   - **📁 Archivo:** [`chiron_learning_agent_langgraph.ipynb`](./all_agents_tutorials/chiron_learning_agent_langgraph.ipynb)
+
    #### Descripción General 🔎
    Un agente de aprendizaje adaptativo que guía a los usuarios a través de contenido educativo usando un sistema estructurado de puntos de control y enseñanza estilo Feynman. El sistema procesa materiales de aprendizaje (proporcionados por el usuario o recuperados de la web), verifica la comprensión a través de puntos de control interactivos, y proporciona explicaciones simplificadas cuando es necesario, creando una experiencia de aprendizaje personalizada que imita la tutoría uno a uno.
 
@@ -262,15 +314,70 @@ Explora nuestra extensa lista de implementaciones de agentes GenAI, ordenadas po
 
 Para comenzar a explorar y construir agentes GenAI:
 
-1. Clona este repositorio:
+1. **Clona este repositorio:**
    ```bash
    git clone https://github.com/afelipfo/genAI.git
+   cd genAI
    ```
-2. Navega a la técnica que te interese:
+
+2. **Instala las dependencias:**
    ```bash
-   cd all_agents_tutorials/nombre-tecnica
+   pip install -r requirements.txt
    ```
-3. Sigue la guía de implementación detallada en el notebook de cada técnica.
+
+3. **Configura las variables de entorno (APIs keys):**
+   ```bash
+   # Crea un archivo .env en la raíz del proyecto
+   OPENAI_API_KEY=tu_clave_openai
+   ANTHROPIC_API_KEY=tu_clave_anthropic  
+   GROQ_API_KEY=tu_clave_groq
+   # Agrega otras claves según el agente que uses
+   ```
+
+4. **Selecciona un agente y comienza:**
+
+   **Para principiantes:**
+   ```bash
+   jupyter notebook all_agents_tutorials/simple_conversational_agent.ipynb
+   ```
+   
+   **Para usuarios intermedios:**
+   ```bash
+   jupyter notebook all_agents_tutorials/langgraph-tutorial.ipynb
+   ```
+   
+   **Para casos de uso específicos:**
+   ```bash
+   # Agente académico
+   jupyter notebook all_agents_tutorials/Academic_Task_Learning_Agent_LangGraph.ipynb
+   
+   # Agente de soporte al cliente  
+   jupyter notebook all_agents_tutorials/customer_support_agent_langgraph.ipynb
+   
+   # Generación de contenido
+   jupyter notebook all_agents_tutorials/ContentIntelligence.ipynb
+   ```
+
+5. **Explora archivos de datos y recursos adicionales:**
+   - **Datos de ejemplo:** [`data/`](./data/) - Datasets y archivos de prueba
+   - **Imágenes y diagramas:** [`images/`](./images/) - Recursos visuales
+   - **Scripts auxiliares:** [`all_agents_tutorials/scripts/`](./all_agents_tutorials/scripts/) - Herramientas y utilidades
+
+### 📋 Prerequisitos
+
+- Python 3.8+
+- Jupyter Notebook o JupyterLab
+- Claves API para los servicios que planees usar (OpenAI, Anthropic, Groq, etc.)
+- Conocimientos básicos de Python y conceptos de IA
+
+### 🔧 Configuración Avanzada
+
+Para configuraciones específicas de agentes, consulta la documentación individual en cada notebook. Algunos agentes pueden requerir:
+
+- Bases de datos vectoriales (Pinecone, Chroma)
+- Herramientas de web scraping
+- APIs específicas de terceros
+- Configuraciones de modelos locales
 
 ## Contribuyendo
 
